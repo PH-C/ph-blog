@@ -1,5 +1,21 @@
 var express = require('express');
 var path = require('path');
+
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path');
+const app = express();
+
+// 定义注册模型
+require('../data/db/modules.js')(mongoose);
+// // 常规设置
+// require('./config/express')(app);
+// // api 路由设置
+// require('./config/url')(app);
+// // 错误处理
+// require('./config/err')(app);
+
+
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');

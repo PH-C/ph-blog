@@ -1,0 +1,29 @@
+.trans-div{
+  display: inline-block;
+  width:100px;
+  height:100px;
+  background-color: red;
+  border-radius: 50%;
+
+}
+
+.trans-div:hover{
+  animation: ani 1s ease-in-out;
+}
+@keyframes ani {
+    0%{
+      background-color: red;
+      transform: translateX(0px) rotate(0deg);
+      box-shadow: 10px 10px 10px red;
+    }
+    100%{
+      background-color: blue;
+      transform: translateX(600px) rotate(360deg);
+      box-shadow: 10px 10px 10px blue;
+    }
+}
+
+// .trans-div:hover{
+//   transition:all 1s ease-in-out;
+//   transform: translateX(300px);
+// }

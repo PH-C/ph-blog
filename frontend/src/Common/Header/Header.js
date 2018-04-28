@@ -49,7 +49,7 @@ class Header extends React.Component {
                 <ul className="list">
                     <li className="item"><Link
                         className={activeKey === 1 ? "link-active" : ""}
-                        to={{pathname: '/home'}}>首页</Link></li>
+                        to={{pathname: '/home'}}>Home</Link></li>
                     <li className="item"><Link
                         className={activeKey === 2 ? "link-active" : ""}
                         to={{pathname: '/hot'}}>前端头条</Link></li>
@@ -60,6 +60,13 @@ class Header extends React.Component {
                         className={activeKey === 4 ? "link-active" : ""}
                         to={{pathname: '/about'}}>关于</Link></li>
                 </ul>
+                <div className="header-personal">
+                  <p className="my-name">Chen PengHui</p>
+                  <p className="my-major">WEB前端爱好者</p>
+                  <p>
+                    <a className="link-button">Get My Skill</a>
+                  </p>
+                </div>
             </div>
         );
     }

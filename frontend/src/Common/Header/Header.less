@@ -1,18 +1,21 @@
 .app-header{
-  height:100px;
+  height:600px;
   background-color: #ffffff;
   .list{
+    position: absolute;
     width: 1000px;
     height: 100px;
-    line-height: 100px;
-    margin: 0 auto;
+    top:30px;
+    left:50%;
+    margin-left: -500px;
   }
   .item{
     display: inline-block;
     padding-right: 36px;
     font-size: 16px;
     a{
-      color: #3a3a3a;
+      color: #777;
+      font-weight: 100;
       &:hover{
         color: #45B6F7;
       }
@@ -21,5 +24,47 @@
   }
   .link-active{
     color: #45B6F7 !important;
+  }
+
+  .header-personal{
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    top:180px;
+    left:50%;
+    margin-left: -500px;
+    text-align: center;
+    p{
+      text-align: center;
+      line-height: 2em;
+    }
+    .my-name{
+      font-size: 50px;
+      letter-spacing: 6px;
+      color: #aaa;
+      font-family: SYHT,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+    }
+    .my-major{
+      font-size: 35px;
+      margin: 5px 0 50px;
+      font-family: myFirstFont;
+      font-weight: 100;
+      font-family: SYHT,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+    }
+    .link-button{
+      display: inline-block;
+      width:296px;
+      height:66px;
+      line-height: 66px;
+      border: 1px solid #45B6F7;
+      color: #45B6F7;
+      font-family: SYHT,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+      &:hover{
+        color: #a5e1fe;
+        border: solid 1px #a5e1fe;
+        // background: #f9f9f9;
+        outline: 0;
+      }
+    }
   }
 }
