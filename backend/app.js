@@ -1,46 +1,54 @@
 var express = require('express');
 var path = require('path');
-
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-const app = express();
-
-// 定义注册模型
-require('../data/db/modules.js')(mongoose);
-// // 常规设置
-// require('./config/express')(app);
-// // api 路由设置
-// require('./config/url')(app);
-// // 错误处理
-// require('./config/err')(app);
-
-
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var index = require('./routes/index');
-var users = require('./routes/users');
-
+var mongoose = require('mongoose');
 var app = express();
 
+require('../data/db/modules.js')(mongoose);
+// var company_news = require('./routes/company_news');
+// var policy = require('./routes/policy');
+// var space = require('./routes/space');
+// var industry_news = require('./routes/industry_news');
+// var user = require('./routes/user');
+// var article_statistics_mini = require('./routes/article_statistics_mini');
+// const index = require('./routes/index');
+// const users = require('./routes/users');
+const city = require('./routes/city');
+
+// module.exports = (app) => {
+//   console.log('init URL');
+//   app.use('/api/users', users);
+//   app.use('/api/city', city);
+//   app.use(index);
+
+//   console.log('init URL end');
+// };
+
 // view engine setup
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+// app.use('/company-news', company_news);
+// app.use('/policy', policy);
+// app.use('/space', space);
+// app.use('/industry-news', industry_news);
+// app.use('/article-statistics',article_statistics_mini);
+// app.use('/user',user);
+// app.use('/',index);
+// app.use('/api/users', users);
+app.use('/city', city);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

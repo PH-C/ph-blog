@@ -1,10 +1,13 @@
-const City = require('./modules/city');
+//var mongoose = require('mongoose');
+
+const CitySchema = require('./modules/city');
 const DB_URL = require('./db');
+
 module.exports = (mongoose) => {
 
   /* 连接 */
   mongoose.connect(DB_URL, {
-    useMongoClient: true,
+      useMongoClient: true
   });
 
   /* 连接成功 */
@@ -21,6 +24,7 @@ module.exports = (mongoose) => {
   mongoose.connection.on('disconnected', function () {
     console.log('Mongoose connection disconnected');
   });
+  // mongoose.model('apply_policy', ApplyPolicySchema(mongoose));
 
-  mongoose.model('city', City(mongoose));
+  mongoose.model('city', CitySchema(mongoose));
 }
