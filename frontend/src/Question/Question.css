@@ -1,0 +1,79 @@
+  .question-list {
+    box-sizing: border-box;
+    width:100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f5efef;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: url("/images/bg.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+  }
+  .question-list h1{
+    font-size: 24px;
+    color: #333;
+    line-height: 1.4;
+  }
+  .question-list h1 a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 24px;
+    color: #333;
+    line-height: 1.4;
+  }
+  .question-list .sponsor{
+    color: #949494;
+    font-size: 13px;
+  }
+  .question-list .description{
+    color: #333;
+    line-height: 1.4;
+  }
+  .question-list .question-detail{
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.8;
+    margin: 10px;
+  }
+  .question-list .comment-area{
+    position: relative;
+    width:508px;
+  }
+  .question-list .comment-area textarea{
+    position: relative;
+    width:508px;
+  }
+  .question-list .comment-item{
+    background-color: #fff;
+    margin: 10px;
+  }
+  .question-list .comment-item .answer{
+    height: 40px;
+    line-height: 40px;
+    padding: 10px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .question-list .comment-item .content{
+    height: auto;
+    padding: 10px;
+  }
+  .question-list .comment-box{
+    position: relative;
+    background-color: #fff;
+  }
+  .question-list .submit-btn{
+    position: absolute;
+    height: 40px;
+    background-color: blue;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    top:10px;
+    left:560px;
+  }
+  .question-list .input{
+    padding: 10px;
+  }
+  
+  

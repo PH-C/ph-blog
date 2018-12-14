@@ -1,5 +1,8 @@
 import React from 'react';
+import firebase from 'firebase';
+
 class App extends React.Component {
+
 
     render() {
         return (
@@ -9,5 +12,7 @@ class App extends React.Component {
         );
     }
 }
+
+
 
 export default App
